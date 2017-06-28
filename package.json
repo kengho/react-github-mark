@@ -1,14 +1,15 @@
 {
   "name": "react-github-mark",
-  "version": "1.0.0",
-  "description": "react-github-mark React component",
+  "version": "1.0.1",
+  "description": "React component showing GitHub mark (aka octocat) fixed in a screen corner.",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
     "css",
     "es",
     "lib",
-    "umd"
+    "umd",
+    "images"
   ],
   "scripts": {
     "build": "nwb build-react-component",
@@ -27,11 +28,14 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
-  "author": "",
-  "homepage": "",
+  "author": "Alexander Morozov",
+  "homepage": "https://kengho.tech",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/kengho/react-github-mark",
   "keywords": [
-    "react-component"
+    "react-component",
+    "gihhub",
+    "mark",
+    "logo"
   ]
 }
