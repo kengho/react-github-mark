@@ -5,33 +5,22 @@ import GithubMarkLight from '../images/GitHub-Mark-Light-32px.png';
 
 export default class extends Component {
   render() {
-    let top;
-    let left;
-    let bottom = 0;
-    let right = 0;
-    switch (this.props.position) {
-      case 'top-left':
-        top = 0;
-        left = 0;
-        break;
-      case 'top-right':
-        top = 0;
-        bottom = 0;
-        break;
-      case 'bottom-left':
-        bottom = 0;
-        left = 0;
-        break;
-      case 'bottom-right':
-        bottom = 0;
-        right = 0;
-        break;
-      default:
-    }
-
+    const position = this.props.position || 'bottom-right';
+    const padding = this.props.padding || '8px-8px';
     let GithubMark = GithubMarkRegular;
     if (this.props.light) {
       GithubMark = GithubMarkLight;
+    }
+
+    const propSplitRegExp = /([^-]+)-([^-]+)/;
+    const parsedPosition = position.match(propSplitRegExp);
+    const parsedPadding = padding.match(propSplitRegExp);
+
+    const styleProps = {};
+
+    if (parsedPosition && parsedPadding) {
+      styleProps[parsedPosition[1]] = parsedPadding[1];
+      styleProps[parsedPosition[2]] = parsedPadding[2];
     }
 
     return (
@@ -39,14 +28,11 @@ export default class extends Component {
         <a
           href={this.props.href}
           style={{
+            ...styleProps,
+            zIndex: '9999',
             position: 'fixed',
-            padding: '8px',
             width: '32px',
             height: '32px',
-            top,
-            left,
-            bottom,
-            right,
           }}
         >
           <img src={GithubMark} alt="GitHub" />

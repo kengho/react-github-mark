@@ -1,6 +1,6 @@
 {
   "name": "react-github-mark",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "React component showing GitHub mark (aka octocat) fixed in a screen corner.",
   "main": "lib/index.js",
   "module": "es/index.js",

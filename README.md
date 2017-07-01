@@ -34,6 +34,7 @@ import GithubMark from 'react-github-mark';
   position="top-right"
   position="bottom-left"
   position="bottom-right" // default
+  padding="8px-8px" // default
   light
   light={false} // default
   ...
