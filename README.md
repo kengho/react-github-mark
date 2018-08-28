@@ -43,7 +43,7 @@ import GithubMark from 'react-github-mark';
 
 ## Notes
 
-According to [this](https://github.com/insin/nwb/issues/195#issuecomment-264089440) thread in order to use this package you have to use webpack and appropriate `file-loader` configuration in place (which is almost always is true anyway).
+According to [this](https://github.com/insin/nwb/issues/195#issuecomment-264089440) thread in order to use this package you have to use webpack and appropriate `file-loader` configuration in place (which is almost always true anyway).
 
 ## License
 
